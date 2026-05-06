@@ -1,0 +1,3 @@
+[submodule "Aplicacao SGB/SGB"]
+	path = Aplicacao SGB/SGB
+	url = https://github.com/NickCampos03/SGB.git
