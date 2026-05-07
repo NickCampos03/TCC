@@ -131,7 +131,7 @@ npm run dev
 
 - **Gabriel Cândido**
 - **Nicolas José Duarte de Campos**
-Alunos de Bacharelado de Ciência da Computação - IFSP Salto
+- Alunos de Bacharelado de Ciência da Computação - IFSP Salto
 
 ---
  
