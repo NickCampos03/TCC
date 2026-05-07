@@ -129,8 +129,8 @@ npm run dev
 
 ## 👨‍💻 Autores
 
-Gabriel Cândido
-Nicolas Campos
+- **Gabriel Cândido**
+- **Nicolas José Duarte de Campos**
 Alunos de Bacharelado de Ciência da Computação - IFSP Salto
 
 ---
