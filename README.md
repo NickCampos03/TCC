@@ -128,7 +128,8 @@ npm run dev
 ---
 
 ## 👨‍💻 Autores
-
+- **Orientador Prof. Me. Francisco Diego Garrido da Silva**
+- **Co-Orientador Prof. Reinaldo do Valle Junior**  
 - **Gabriel Cândido**
 - **Nicolas José Duarte de Campos**
 - Alunos de Bacharelado de Ciência da Computação - IFSP Salto
