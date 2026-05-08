@@ -34,13 +34,13 @@ def main():
         elif opcao == '3':
             print("\n[INFO] Analisando Logs Reais...")
             # Caminho dos seus logs reais que você nos mandou
-            processar_logs_reais('data/raw/meus_logs_reais.log', 'reports/resultado_analise.csv')
+            processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
         
         elif opcao == '4':
             print("\n[INFO] Executando Fluxo Completo...")
             processar_e_balancear()
             executar_treinamento()
-            processar_logs_reais('data/raw/meus_logs_reais.log', 'reports/resultado_analise.csv')
+            processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
             print("\n[SUCESSO] Pipeline finalizada com sucesso!")
         
         elif opcao == '0':
