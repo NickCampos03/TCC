@@ -98,7 +98,7 @@ Esses dados são utilizados para treinar e testar o modelo de Machine Learning.
 
 ---
 
-## ▶️ Como Executar o Projeto
+## ▶️ Como Executar a Aplicação Web
 
 ### 🔹 Backend (Spring Boot)
 
