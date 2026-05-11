@@ -3,8 +3,8 @@ import os
 from sklearn.preprocessing import MinMaxScaler
 
 def processar_e_balancear():
-    input_path = 'data/raw/XSS_dataset.csv'
-    output_treino = 'data/processed/dataset_distribuido_70_30.csv'
+    input_path = 'data/raw/XSS/XSS_dataset.csv'
+    output_treino = 'data/processed/XSS/dataset_distribuido.csv'
 
     if not os.path.exists(input_path):
         print(f"Erro: Arquivo {input_path} não encontrado.")

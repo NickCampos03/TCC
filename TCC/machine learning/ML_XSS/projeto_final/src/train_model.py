@@ -40,7 +40,7 @@ def salvar_graficos(modelo, X_test, y_test, nomes_features):
     plt.close('all')
 
 def executar_treinamento():
-    input_path = 'data/processed/dataset_distribuido_70_30.csv'
+    input_path = 'data/processed/XSS/dataset_distribuido.csv'
     df = pd.read_csv(input_path)
     coluna_alvo = 'label' if 'label' in df.columns else 'Class'
     

@@ -33,8 +33,8 @@ def processar_logs_reais(arquivo_entrada, arquivo_saida):
     modelo = joblib.load(modelo_path)
     colunas_do_modelo = modelo.feature_names_in_
 
-    # Regex para capturar Data, IP e o JSON do BODY
-    regex_log = r"(?P<data>\d{4}-\d{2}-\d{2}T[\d:.-]+).*IP:\s*(?P<ip>[a-fA-F\d\.:]+).*BODY:\s*(?P<body>\{.*\})\s*\|\s*STATUS"
+    # O ".*?" é um seletor preguiçoso que ignora espaços extras entre os campos
+    regex_log = r"(?P<data>\d{4}-\d{2}-\d{2}T[\d:.-]+).*?IP:\s*(?P<ip>[\w\.:]+).*?BODY:\s*(?P<body>\{.*\})"
     
     dados_analisados = []
 
@@ -78,7 +78,6 @@ def processar_logs_reais(arquivo_entrada, arquivo_saida):
                     # Ajustamos a confiança para refletir a detecção do script
                     exibir_confianca = max(confianca_bruta, 0.85) 
                 else:
-                    # Se não há evidência clara, seguimos estritamente o modelo
                     predicao = modelo.predict(df_input)[0]
                     predicao_final = 'ATAQUE' if predicao == 1 or confianca_bruta > 0.3 else 'NORMAL'
                     exibir_confianca = confianca_bruta
@@ -101,5 +100,4 @@ def processar_logs_reais(arquivo_entrada, arquivo_saida):
         print("Nenhum log válido foi encontrado pelo Regex.")
 
 if __name__ == "__main__":
-    # Caminhos padrão do seu projeto
     processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
