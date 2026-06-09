@@ -1,56 +1,58 @@
-import pandas as pd
 import os
-from sklearn.preprocessing import MinMaxScaler
+import joblib
+import pandas as pd
+from src.feature_extractor import FEATURE_COLUMNS
 
+
+RAW_DATASET_PATH = "data/raw/XSS/XSS_dataset.csv"
+PROCESSED_DATASET_PATH = "data/processed/XSS/dataset_distribuido.csv"
+
+# 1. VALIDAÇÃO E FILTRAGEM DE COLUNAS
+def _validar_colunas(df):
+    expected_columns = FEATURE_COLUMNS + ["Class"]
+    missing = [col for col in expected_columns if col not in df.columns]
+    extra = [col for col in df.columns if col not in expected_columns]
+
+    if missing:
+        raise ValueError("Dataset sem colunas obrigatorias: " + ", ".join(missing))
+
+    if extra:
+        df = df.drop(columns=extra)
+
+    return df[expected_columns]
+
+
+# 2. PIPELINE DE PROCESSAMENTO E LIMPEZA
 def processar_e_balancear():
-    input_path = 'data/raw/XSS/XSS_dataset.csv'
-    output_treino = 'data/processed/XSS/dataset_distribuido.csv'
+    print("\n[INFO] Carregando dataset bruto...")
+    df = pd.read_csv(RAW_DATASET_PATH)
 
-    if not os.path.exists(input_path):
-        print(f"Erro: Arquivo {input_path} não encontrado.")
-        return
+    if "Unnamed: 0" in df.columns:
+        df = df.drop(columns=["Unnamed: 0"])
 
-    # 1. LER O DATASET
-    df = pd.read_csv(input_path)
-    if 'Unnamed: 0' in df.columns:
-        df = df.drop('Unnamed: 0', axis=1)
+    df = _validar_colunas(df)
 
-    coluna_label = 'Class' if 'Class' in df.columns else 'Label'
-    
-    # 2. LÓGICA DE BALANCEAMENTO 70/30
-    # Separamos as classes para garantir a proporção exata
-    df_normal = df[df[coluna_label] == 0]
-    df_ataque = df[df[coluna_label] == 1]
-    
-    n_ataques = len(df_ataque)
-    # Cálculo: Se n_ataques é 30%, quanto é 70%? (n * 0.7 / 0.3)
-    n_normal_proporcional = int((n_ataques * 0.8) / 0.2)
-    
-    print(f"[INFO] Ataques encontrados: {n_ataques}")
-    print(f"[INFO] Selecionando {n_normal_proporcional} amostras normais para manter proporção 70/30.")
+    for col in FEATURE_COLUMNS:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
 
-    # Amostramos os normais para casar com a proporção
-    df_normal_reduzido = df_normal.sample(n=min(len(df_normal), n_normal_proporcional), random_state=42)
-    
-    # Unimos e embaralhamos
-    df_balanceado = pd.concat([df_normal_reduzido, df_ataque]).sample(frac=1, random_state=42)
+    df["Class"] = pd.to_numeric(df["Class"], errors="coerce")
+    df = df[df["Class"].isin([0, 1])]
+    df["Class"] = df["Class"].astype(int)
 
-    # 3. NORMALIZAÇÃO
-    scaler = MinMaxScaler()
-    X = df_balanceado.drop(coluna_label, axis=1)
-    y = df_balanceado[coluna_label]
-    
-    X_scaled = scaler.fit_transform(X)
-    df_final = pd.DataFrame(X_scaled, columns=X.columns)
-    df_final['label'] = y.values
+    linhas_antes = len(df)
+    df = df.drop_duplicates()
+    duplicadas = linhas_antes - len(df)
+    df = df.sample(frac=1, random_state=42)
 
-    # 4. SALVAMENTO
-    os.makedirs(os.path.dirname(output_treino), exist_ok=True)
-    df_final.to_csv(output_treino, index=False)
-    
-    print(f"--- SUCESSO ---")
-    print(f"Total Final: {len(df_final)} (70% Normal / 30% Ataque)")
-    print(f"Arquivo atualizado em: {output_treino}")
+    os.makedirs("models", exist_ok=True)
+    joblib.dump(FEATURE_COLUMNS, "models/feature_columns.joblib")
 
-if __name__ == "__main__":
-    processar_e_balancear()
+    os.makedirs(os.path.dirname(PROCESSED_DATASET_PATH), exist_ok=True)
+    df.to_csv(PROCESSED_DATASET_PATH, index=False)
+    distribuicao = df["Class"].value_counts().sort_index()
+
+    print(f"[SUCESSO] Dataset salvo em {PROCESSED_DATASET_PATH}")
+    print(f"[INFO] Linhas finais: {len(df)} (duplicadas removidas: {duplicadas})")
+    print(f"[INFO] Distribuicao de classes: NORMAL={int(distribuicao.get(0, 0))}, ATAQUE={int(distribuicao.get(1, 0))}")
+
+    return df

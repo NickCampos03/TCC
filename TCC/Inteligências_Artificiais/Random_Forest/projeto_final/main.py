@@ -1,53 +1,57 @@
 import os
+from src.parse_logs import processar_logs_reais
 from src.preprocess import processar_e_balancear
 from src.train_model import executar_treinamento
-from src.parse_logs import processar_logs_reais
+
+
+LOGS_PATH = "data/app_logs/app_logs.log.txt"
+RESULTADO_PATH = "reports/resultado_analise.csv"
 
 def menu():
-    print("\n" + "="*30)
-    print("SISTEMA DE DETECÇÃO DE XSS (ML)")
-    print("="*30)
-    print("1. Pré-processar Dados (Limpeza + 70/30)")
-    print("2. Treinar Modelo (Random Forest)")
-    print("3. Analisar Logs Reais (Relatório)")
-    print("4. Executar Pipeline Completa")
-    print("0. Sair")
-    return input("\nEscolha uma opção: ")
+    print("\n" + "=" * 50)
+    print("DETECCAO DE XSS COM RANDOM FOREST")
+    print("=" * 50)
+    print("1 - Pre-processar dataset")
+    print("2 - Treinar modelo")
+    print("3 - Analisar logs")
+    print("4 - Pipeline completa")
+    print("0 - Sair")
+    return input("\nEscolha: ")
+
+
+def executar_pipeline_completa():
+    processar_e_balancear()
+    executar_treinamento()
+    processar_logs_reais(
+        LOGS_PATH,
+        RESULTADO_PATH
+    )
+    print("\n[SUCESSO] Pipeline concluida.")
+
 
 def main():
-    # Garante que as pastas necessárias existam
-    for pasta in ['data/processed', 'models', 'reports']:
-        if not os.path.exists(pasta):
-            os.makedirs(pasta)
+    os.makedirs("reports", exist_ok=True)
+    os.makedirs("models", exist_ok=True)
 
     while True:
         opcao = menu()
 
-        if opcao == '1':
-            print("\n[INFO] Iniciando Pré-processamento...")
+        if opcao == "1":
             processar_e_balancear()
-        
-        elif opcao == '2':
-            print("\n[INFO] Iniciando Treinamento do Modelo...")
+        elif opcao == "2":
             executar_treinamento()
-        
-        elif opcao == '3':
-            print("\n[INFO] Analisando Logs Reais...")
-            # Caminho dos seus logs reais que você nos mandou
-            processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
-        
-        elif opcao == '4':
-            print("\n[INFO] Executando Fluxo Completo...")
-            processar_e_balancear()
-            executar_treinamento()
-            processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
-            print("\n[SUCESSO] Pipeline finalizada com sucesso!")
-        
-        elif opcao == '0':
-            print("Encerrando...")
+        elif opcao == "3":
+            processar_logs_reais(
+                LOGS_PATH,
+                RESULTADO_PATH
+            )
+        elif opcao == "4":
+            executar_pipeline_completa()
+        elif opcao == "0":
             break
         else:
-            print("Opção inválida!")
+            print("Opcao invalida.")
+
 
 if __name__ == "__main__":
     main()

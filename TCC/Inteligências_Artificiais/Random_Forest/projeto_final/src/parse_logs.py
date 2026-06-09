@@ -1,103 +1,174 @@
-import re
-import pandas as pd
-import joblib
+import json
 import os
-from src.feature_extractor import extrair_features 
+import re
+import joblib
+import pandas as pd
+from src.feature_extractor import (extract_features, xss_indicator_score)
 
-def mapear_dinamicamente(dict_extraido, colunas_modelo):
-    """
-    Cruza os dados extraídos com as colunas que o modelo Random Forest espera.
-    Isso evita que o modelo ignore dados se os títulos das tabelas forem 
-    ligeiramente diferentes dos nomes das chaves no extrator.
-    """
-    input_final = {}
-    for col in colunas_modelo:
-        valor = 0
-        col_lower = col.lower()
-        # Procura correspondência por palavra-chave (ex: 'script' em 'html_tag_script')
-        for chave, v in dict_extraido.items():
-            if chave in col_lower:
-                valor = v
-                break
-        input_final[col] = valor
-    return input_final
 
-def processar_logs_reais(arquivo_entrada, arquivo_saida):
-    modelo_path = 'models/random_forest_v1.pkl'
-    
+BODY_PATTERN = re.compile(r"\bBODY:\s*(.*)$", re.IGNORECASE)
+IP_PATTERN = re.compile(r"\bIP:\s*([0-9a-fA-F:.]+)")
+TIMESTAMP_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))")
+
+def _extrair_strings_json(valor):
+    if isinstance(valor, str):
+        return [valor]
+
+    if isinstance(valor, dict):
+        strings = []
+        for item in valor.values():
+            strings.extend(_extrair_strings_json(item))
+        return strings
+
+    if isinstance(valor, list):
+        strings = []
+        for item in valor:
+            strings.extend(_extrair_strings_json(item))
+        return strings
+
+    if valor is None:
+        return []
+
+    return [str(valor)]
+
+
+def extrair_payload_do_log(linha):
+    linha = linha.strip()
+    ip_match = IP_PATTERN.search(linha)
+    body_match = BODY_PATTERN.search(linha)
+    timestamp_match = TIMESTAMP_PATTERN.search(linha)
+    ip = ip_match.group(1) if ip_match else ""
+    body = body_match.group(1).strip() if body_match else linha
+    timestamp = timestamp_match.group(1) if timestamp_match else ""
+    texto_analisado = body
+
+    try:
+        body_json = json.loads(body)
+        valores = _extrair_strings_json(body_json)
+        if valores:
+            texto_analisado = " ".join(valores)
+    except json.JSONDecodeError:
+        pass
+
+    return {
+        "Linha_Log": linha,
+        "IP": ip,
+        "Body": body,
+        "Texto_Analisado": texto_analisado,
+        "Data_Hora": timestamp
+    }
+
+
+def _carregar_modelo():
+    modelo_path = "models/random_forest_v1.pkl"
+    colunas_path = "models/feature_columns.joblib"
+
     if not os.path.exists(modelo_path):
-        print(f"Erro: Modelo não encontrado em {modelo_path}")
-        return
-    
-    # Carrega o modelo e identifica as colunas que ele exige
-    modelo = joblib.load(modelo_path)
-    colunas_do_modelo = modelo.feature_names_in_
+        raise FileNotFoundError(
+            "Modelo nao encontrado. Execute primeiro a opcao 2 ou 4."
+        )
 
-    # O ".*?" é um seletor preguiçoso que ignora espaços extras entre os campos
-    regex_log = r"(?P<data>\d{4}-\d{2}-\d{2}T[\d:.-]+).*?IP:\s*(?P<ip>[\w\.:]+).*?BODY:\s*(?P<body>\{.*\})"
-    
-    dados_analisados = []
+    if not os.path.exists(colunas_path):
+        raise FileNotFoundError(
+            "Arquivo de colunas nao encontrado. Execute primeiro a opcao 2 ou 4."
+        )
 
-    if not os.path.exists(arquivo_entrada):
-        print(f"Erro: Arquivo {arquivo_entrada} não encontrado.")
-        return
+    model = joblib.load(modelo_path)
+    feature_columns = joblib.load(colunas_path)
+    return model, feature_columns
 
-    print(f"Iniciando análise de: {arquivo_entrada}")
 
-    with open(arquivo_entrada, 'r', encoding='utf-8') as f:
-        for linha in f:
-            match = re.search(regex_log, linha)
-            if match:
-                body = match.group('body')
-                
-                # 1. Extração baseada em padrões
-                dict_feats = extrair_features(body)
-                
-                # 2. Mapeamento inteligente para as colunas do modelo
-                feats_adaptadas = mapear_dinamicamente(dict_feats, colunas_do_modelo)
-                
-                # 3. Criação do DataFrame respeitando a ordem das colunas do treino
-                df_input = pd.DataFrame([feats_adaptadas])[colunas_do_modelo]
-                
-                # 4. Predição e Probabilidade
-                probabilidades = modelo.predict_proba(df_input)[0]
-                confianca_bruta = probabilidades[1]
+def processar_logs_reais(caminho_logs, caminho_saida, threshold=0.80, regex_threshold=7):
 
-                # --- Lógica de Apoio à Decisão (Guardião) ---
-                # O script ajuda o modelo a não ignorar evidências claras de XSS
-                evidencia_clara = any([
-                    dict_feats.get('script', 0) > 0,
-                    dict_feats.get('onerror', 0) > 0,
-                    dict_feats.get('javascript_proto', 0) > 0,
-                    dict_feats.get('iframe', 0) > 0
-                ])
+    print("\n[INFO] Carregando modelo Random Forest...")
+    model, feature_columns = _carregar_modelo()
 
-                if evidencia_clara:
-                    # Se há evidência, tratamos como ataque mesmo com confiança baixa do modelo
-                    predicao_final = 'ATAQUE'
-                    # Ajustamos a confiança para refletir a detecção do script
-                    exibir_confianca = max(confianca_bruta, 0.85) 
-                else:
-                    predicao = modelo.predict(df_input)[0]
-                    predicao_final = 'ATAQUE' if predicao == 1 or confianca_bruta > 0.3 else 'NORMAL'
-                    exibir_confianca = confianca_bruta
+    if not os.path.exists(caminho_logs):
+        print(f"[ERRO] Arquivo nao encontrado: {caminho_logs}")
+        return None
 
-                dados_analisados.append({
-                    'Data/Hora': match.group('data'),
-                    'IP': match.group('ip'),
-                    'Payload': body,
-                    'Classificacao': predicao_final,
-                    'Confianca': f"{exibir_confianca * 100:.1f}%"
-                })
+    registros = []
+    features_batch = []
 
-    if dados_analisados:
-        df_final = pd.DataFrame(dados_analisados)
-        os.makedirs(os.path.dirname(arquivo_saida), exist_ok=True)
-        # Salva com utf-8-sig para garantir que o Excel abra os acentos corretamente
-        df_final.to_csv(arquivo_saida, index=False, encoding='utf-8-sig')
-        print(f"Análise concluída. Relatório salvo em: {arquivo_saida}")
-    else:
-        print("Nenhum log válido foi encontrado pelo Regex.")
+    print("[INFO] Extraindo features dos logs...")
 
-if __name__ == "__main__":
-    processar_logs_reais('data/app_logs/app_logs.log.txt', 'reports/resultado_analise.csv')
+    with open(caminho_logs, "r", encoding="utf-8", errors="ignore") as arquivo:
+        for numero_linha, linha in enumerate(arquivo, start=1):
+            if not linha.strip():
+                continue
+
+            try:
+                registro = extrair_payload_do_log(linha)
+                features = extract_features(registro["Texto_Analisado"])
+
+                if len(features) != len(feature_columns):
+                    print(
+                        f"[AVISO] Linha {numero_linha} ignorada "
+                        f"(features={len(features)}, esperado={len(feature_columns)})"
+                    )
+                    continue
+
+                registro["Numero_Linha"] = numero_linha
+                registros.append(registro)
+                features_batch.append(features)
+
+            except Exception as exc:
+                print(f"[ERRO] Falha na linha {numero_linha}: {exc}")
+
+    if not features_batch:
+        print("[ERRO] Nenhuma feature valida encontrada.")
+        return None
+
+    print(f"[INFO] Executando predicao em {len(features_batch)} logs...")
+
+    X = pd.DataFrame(features_batch, columns=feature_columns)
+    probs = model.predict_proba(X)[:, 1]
+    pred_modelo = model.predict(X)
+    resultados = []
+
+    for registro, features, prob, pred in zip(registros, features_batch, probs, pred_modelo):
+        score_regex = xss_indicator_score(features)
+        regex_detectou = bool(score_regex >= regex_threshold)
+        rf_detectou = bool(prob >= threshold and score_regex >= 3)
+        ataque = rf_detectou or regex_detectou
+
+        if rf_detectou and regex_detectou:
+            origem = "(Regex_Redundante)"
+        elif rf_detectou:
+            origem = "(Random_Forest)"
+        elif regex_detectou:
+            origem = "(Filtro_Regex)"
+        else:
+            origem = "(Normal)"
+
+        resultados.append({
+            "Data/Hora": registro["Data_Hora"],
+            "IP": registro["IP"],
+            "Payload": registro["Body"],
+            "Indicadores_XSS": int(score_regex),
+            "Classificacao": "ATAQUE" if ataque else "NORMAL",
+            "Probabilidade_Ataque_IA": f"{round(float(prob) * 100, 1)}%",
+            "Tipo_Deteccao": origem,
+            "_Prob_RF_Fid": round(float(prob) * 100, 4) 
+        })
+
+    df_resultado = pd.DataFrame(resultados)
+
+    os.makedirs(os.path.dirname(caminho_saida), exist_ok=True)
+    df_salvar = df_resultado.drop(columns=["_Prob_RF_Fid"])
+    df_salvar.to_csv(caminho_saida, index=False, encoding="utf-8-sig")
+    ataques = int((df_resultado["Classificacao"] == "ATAQUE").sum())
+    normais = int((df_resultado["Classificacao"] == "NORMAL").sum())
+
+    print("\n===== RESUMO =====")
+    print(f"Total analisado : {len(df_resultado)}")
+    print(f"Ataques         : {ataques}")
+    print(f"Normais         : {normais}")
+    print(f"\n[SUCESSO] Relatorio salvo em: {caminho_saida}")
+
+    print("\n===== PROBABILIDADES RF =====")
+    print("Minima :", round(df_resultado["_Prob_RF_Fid"].min(), 2), "%")
+    print("Media  :", round(df_resultado["_Prob_RF_Fid"].mean(), 2), "%")
+    print("Maxima :", round(df_resultado["_Prob_RF_Fid"].max(), 2), "%")
+
+    return df_resultado

