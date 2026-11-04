@@ -1,3 +1,6 @@
+TCC/Inteligencias_Artificiais/Keras/Projeto_RN_PathTraversal/data/dataset_hibrido.csv filter=lfs diff=lfs merge=lfs -text
+TCC/Inteligencias_Artificiais/Random_Forest/projeto_final_PathTraversal/data/raw/SQLi/SQLi_dataset_3Mi.csv filter=lfs diff=lfs merge=lfs -text
+TCC/Inteligencias_Artificiais/Keras/Projeto_RN_PathTraversal.zip filter=lfs diff=lfs merge=lfs -text
 dataset_hibrido.csv filter=lfs diff=lfs merge=lfs -text
 SQLi_dataset_3Mi.csv filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
