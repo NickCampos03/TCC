@@ -1,0 +1,2 @@
+train_accuracy,train_precision_weighted,train_recall_weighted,train_f1_weighted,test_accuracy,test_precision_weighted,test_recall_weighted,test_f1_weighted,test_roc_auc_ovr_weighted,f1_gap_train_test,oob_score
+0.9910586944596819,0.9910661644709614,0.9910586944596819,0.9910440349586174,0.9902738674174558,0.9902805055068924,0.9902738674174558,0.9902591300453519,0.9997972388339449,0.0007849049132654384,0.9885353812397147

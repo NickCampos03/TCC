@@ -1,0 +1,13 @@
+{
+  "train_accuracy": 0.9910586944596819,
+  "train_precision_weighted": 0.9910661644709614,
+  "train_recall_weighted": 0.9910586944596819,
+  "train_f1_weighted": 0.9910440349586174,
+  "test_accuracy": 0.9902738674174558,
+  "test_precision_weighted": 0.9902805055068924,
+  "test_recall_weighted": 0.9902738674174558,
+  "test_f1_weighted": 0.9902591300453519,
+  "test_roc_auc_ovr_weighted": 0.9997972388339449,
+  "f1_gap_train_test": 0.0007849049132654384,
+  "oob_score": 0.9885353812397147
+}

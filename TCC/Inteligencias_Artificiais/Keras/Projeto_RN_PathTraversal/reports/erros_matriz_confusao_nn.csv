@@ -1,0 +1,5 @@
+Classe_Real,Classe_Prevista,Erros,Percentual_na_Classe_Real
+Benigno,XSS,256,0.337
+XSS,Benigno,244,2.31
+SQLi,Benigno,217,0.474
+Benigno,SQLi,22,0.029

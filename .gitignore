@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Arquivos grandes do dataset
+TCC/Inteligencias_Artificiais/Keras/Projeto_RN_PathTraversal/data/SQLi/SQLi_dataset_3Mi.csv
+
+# Arquivos temporários
+*.log
+.DS_Store
